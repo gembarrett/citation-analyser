@@ -4,6 +4,9 @@ $(document).ready(function(){
       var innerNoOfId = 0;
       var innerInnerNoOfId = 0;
       var innerInnerInnerNoOfId = 0;
+      var innerInnerInnerInnerNoOfId = 0;
+      var shouldStayZero = 0;
+      var whyIsThisStillGoing = 0;
          // for every object in the json
          for (var i = 0; i < obj.length; i++) {
            thisObj = obj[i];
@@ -21,6 +24,19 @@ $(document).ready(function(){
                  var prevPrevPrevObj = obj[i-3];
                  if (checkForPreviousCitation(prevPrevPrevObj)){
                    innerInnerInnerNoOfId++;
+                   var prevPrevPrevPrevObj = obj[i-4];
+                   if (checkForPreviousCitation(prevPrevPrevPrevObj)){
+                     innerInnerInnerInnerNoOfId++;
+                     var shouldBeUnneccessary = obj[i-5];
+                     if (checkForPreviousCitation(shouldBeUnneccessary)){
+                       shouldStayZero++;
+                       var wtaf = obj[i-6];
+                       if (checkForPreviousCitation(whyIsThisStillGoing)){
+                         whyIsThisStillGoing++;
+                         console.log(thisObj.text + "\n" + prevObj.text + "\n" + prevPrevObj.text + "\n" + prevPrevPrevObj.text + "\n" + prevPrevPrevPrevObj.text + "\n" + shouldBeUnneccessary.text + "\n" + whyIsThisStillGoing.text);
+                       }
+                     }
+                   }
                  }
                }
              }
@@ -34,6 +50,12 @@ $(document).ready(function(){
         console.log(innerInnerNoOfId);
         $('h4 span').append(innerInnerInnerNoOfId);
         console.log(innerInnerInnerNoOfId);
+        $('h5 span').append(innerInnerInnerInnerNoOfId);
+        console.log(innerInnerInnerInnerNoOfId);
+        $('h6 span').append(shouldStayZero);
+        console.log(shouldStayZero);
+        $('h7 span').append(whyIsThisStillGoing);
+        console.log(whyIsThisStillGoing);
     });
 });
 
