@@ -48,17 +48,16 @@ $(document).ready(function(){
         console.log(innerInnerInnerInnerNoOfId);
         $('h2 span').append(shouldStayZero);
         console.log(shouldStayZero);
-        // var spans = $('span');
-        // for (var i=0; i<spans.length; i++) {
-        //   var thisNumber = parseInt(spans[i].innerText);
-        //   if (thisNumber > 100) {
-        //     $(spans[i]).css('color','red');
-        //     $(spans[i]).css('font-size','200%');
-        //   } else if (thisNumber < 100) {
-        //     $(spans[i]).css('font-size','200%');
-        //   }
-        // }
-        // console.log(spans);
+        var spans = $('span');
+        for (var i=0; i<spans.length; i++) {
+          var thisNumber = parseInt(spans[i].innerText);
+          if (thisNumber > 100) {
+            $(spans[i]).css('font-size','150%');
+          } else if (thisNumber < 100) {
+            $(spans[i]).css('font-size','200%');
+          }
+        }
+        console.log(spans);
     });
 });
 
