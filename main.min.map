@@ -1,0 +1,1 @@
+{"version":3,"file":"main.min.js","sources":["main.js"],"names":["$","document","ready","getJSON","obj","alert","text"],"mappings":"AAAAA,EAAEC,UAAUC,MAAM,WACdF,EAAEG,QAAQ,+BAAgC,SAASC,GAC9CC,MAAMD,EAAI,GAAGE"}
