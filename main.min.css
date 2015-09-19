@@ -1,2 +1,2 @@
-body{font-family:Helvetica, sans-serif;text-align:center}#content-container{max-width:768px;margin:0 auto}h1{font-size:3em}h2{font-size:2.5em}h3{font-size:2em}h4{font-size:1.5em}
+body{font-family:Helvetica, sans-serif;text-align:center}#content-container{max-width:960px;margin:0 auto}h2,h3,h4,h5,h6,h7{font-weight:normal}h2 span,h3 span,h4 span,h5 span,h6 span,h7 span{font-weight:bold}p{margin-top:100px}p a{color:green}h1{font-size:3em;font-weight:bold}h2{font-size:2em}h3{font-size:1.8em}h4{font-size:1.6em}h5{font-size:1.4em}h6{font-size:1.2em}h7{font-size:1em}
 /*# sourceMappingURL=main.min.css.map */

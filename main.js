@@ -6,7 +6,6 @@ $(document).ready(function(){
       var innerInnerInnerNoOfId = 0;
       var innerInnerInnerInnerNoOfId = 0;
       var shouldStayZero = 0;
-      var whyIsThisStillGoing = 0;
          // for every object in the json
          for (var i = 0; i < obj.length; i++) {
            thisObj = obj[i];
@@ -30,11 +29,6 @@ $(document).ready(function(){
                      var shouldBeUnneccessary = obj[i-5];
                      if (checkForPreviousCitation(shouldBeUnneccessary)){
                        shouldStayZero++;
-                       var wtaf = obj[i-6];
-                       if (checkForPreviousCitation(whyIsThisStillGoing)){
-                         whyIsThisStillGoing++;
-                         console.log(thisObj.text + "\n" + prevObj.text + "\n" + prevPrevObj.text + "\n" + prevPrevPrevObj.text + "\n" + prevPrevPrevPrevObj.text + "\n" + shouldBeUnneccessary.text + "\n" + whyIsThisStillGoing.text);
-                       }
                      }
                    }
                  }
@@ -42,20 +36,29 @@ $(document).ready(function(){
              }
            }
         }
-        $('h1 span').append(noOfId);
+        $('h7 span').append(noOfId);
         console.log(noOfId);
-        $('h2 span').append(innerNoOfId);
+        $('h6 span').append(innerNoOfId);
         console.log(innerNoOfId);
-        $('h3 span').append(innerInnerNoOfId);
+        $('h5 span').append(innerInnerNoOfId);
         console.log(innerInnerNoOfId);
         $('h4 span').append(innerInnerInnerNoOfId);
         console.log(innerInnerInnerNoOfId);
-        $('h5 span').append(innerInnerInnerInnerNoOfId);
+        $('h3 span').append(innerInnerInnerInnerNoOfId);
         console.log(innerInnerInnerInnerNoOfId);
-        $('h6 span').append(shouldStayZero);
+        $('h2 span').append(shouldStayZero);
         console.log(shouldStayZero);
-        $('h7 span').append(whyIsThisStillGoing);
-        console.log(whyIsThisStillGoing);
+        var spans = $('span');
+        for (var i=0; i<spans.length; i++) {
+          var thisNumber = parseInt(spans[i].innerText);
+          if (thisNumber > 100) {
+            $(spans[i]).css('color','red');
+            $(spans[i]).css('font-size','200%');
+          } else if (thisNumber < 100) {
+            $(spans[i]).css('font-size','200%');
+          }
+        }
+        console.log(spans);
     });
 });
 
