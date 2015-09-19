@@ -6,26 +6,24 @@ $(document).ready(function(){
       var prevPrevStr;
          // for every object in the json
          for (var i = 0; i < obj.length; i++) {
+           thisObj = obj[i];
            // grab the text
-           testStr = obj[i].text ;
+           testStr = thisObj.text;
            // if the text contains a reference to a previous citation
-           if (/(Id\.)|(Id\sat)/ig.test(testStr)) {
+           if (checkForPreviousCitation(thisObj)){
              // add one to the tally
              noOfId++;
-             console.log(obj[i].value + " - " + obj[i].text);
-            // grab the previous text
-            //  prevStr = obj[i -1].text;
-             // if the previous text contains a reference to a previous citation
-            //  if (/Id\.? at/i.test(prevStr)) {
-            //    prevPrevStr = obj[i-2].text;
-            //  } else {
-            //    console.log(prevPrevStr);
-            //  }
-           // if the text doesn't contain a reference to a previous citation
-           } else {
-            //  console.log(prevStr);
+             // print that shizzle out
+             console.log(thisObj.value + " - " + thisObj.text);
            }
         }
+        $('h1 span').append(noOfId);
         console.log(noOfId);
     });
 });
+
+function checkForPreviousCitation(thisObj, noOfId) {
+  if (/(Id\.)|(Id\sat)/ig.test(thisObj.text)) {
+    return true;
+  }
+}
